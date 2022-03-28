@@ -24,8 +24,6 @@ $ sudo apt-get install -y vim openssh-server make
 ### Git
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install -y git
 $ git config --global user.name "Your github name"
 $ git config --global user.email yourgithub@email.com
 
@@ -36,14 +34,12 @@ $ git config --global user.email yourgithub@email.com
 ```
 $ sudo apt-get install -y apache2
 $ sudo a2enmod rewrite
-
 ```
 
 ### PHP
 
 ```
 $ sudo apt-get install -y curl php php-cli php-mysql libapache2-mod-php php-mcrypt php-gd phpunit
-
 ```
 
 ### Sodium (required if PHP < 7.2)
@@ -59,7 +55,6 @@ $ sudo apt-get install -y php-pear
 $ sudo pecl install -f libsodium
 $ sudo echo "extension = sodium.so" > /etc/php/7.2/mods-available/sodium.ini
 $ sudo phpenmod sodium
-
 ```
 
 __NOTE:__ Do not install if PHP >= 7.2, because this library has become a core extension in PHP.
@@ -72,7 +67,6 @@ The next command block is to install MySQL server and to configure it.
 $ sudo apt-get install -y mysql-server libapache2-mod-auth-mysql
 $ sudo mysql_secure_installation
 $ sudo mysql_install_db
-
 ```
 
 Now, we have to create the user and database that proethos2 will have access.
